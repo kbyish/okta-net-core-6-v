@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Member.Attributes;
+using System.Text.Json;
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Member.Controllers
@@ -16,81 +18,57 @@ namespace Member.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<InlineHookController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
 
-        // POST api/<InlineHookController>
-        //[HttpPost]
-
-        //public ActionResult Post([FromBody] TokenPayload token)
-        //{
-        //    Token t = new Token();
-        //    t.ClientID = "abcde";
-        //    t.TokenID = "efgh";
-        //    return Ok(t);
-
-        //}
-
-
-        // POST api/<InlineHookController>
-      //  [HttpPost("TokenHook3")]  //[Route("TokenHook2")]
         [HttpPost]
-        public ActionResult Post() {
-
-            ValueArr Valuex = new ValueArr();
-            Valuex.op = "add";
-            Valuex.path = "/claims/ClaimKeyArray";
-            Valuex.value = "koko";
-            CommandDTO c = new CommandDTO();
-            c.type = "com.okta.identity.patch";
-            c.value= new List<ValueArr>();
-            c.value.Add(Valuex);
-            //Command.Add(c);
-
-            CommandArr Commandsx = new CommandArr();
-
-            Commandsx.commands = new List<CommandDTO>();
-            Commandsx.commands.Add(c);
-            // return Newtonsoft.Json.JsonConvert.SerializeObject(Commandsx);;
-            //return "{'commands':[{'type':'com.okta.identity.patch','value':[{'op':'add','path':'/claims/ClaimKeyArray','value':'Koko'}]}]}";
-
-            return Ok(Commandsx);
-
-        }
-
-        // PUT api/<InlineHookController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult Post()
         {
+
+            MemberKeys MemberKey = new MemberKeys();
+            MemberKey.memberKey = "123456";
+            MemberKey.groupKey = "12";
+            MemberKey.lineOfBusiness = "ABCDEF";
+
+
+            ValueDTO Value = new ValueDTO();
+            Value.op = "add";
+            Value.path = "/claims/memberKeysx";
+            Value.value = new List<MemberKeys>();
+            Value.value.Add(MemberKey);
+
+            CommandDTO command = new CommandDTO();
+            command.type = "com.okta.identity.patch";
+            command.value = new List<ValueDTO>();
+            command.value.Add(Value);
+
+            List<CommandDTO> commands = new List<CommandDTO>();
+            commands.Add(command);
+
+            return Ok(new { commands });
         }
 
-        // DELETE api/<InlineHookController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 
-    public class CommandArr
+
+    public class CommandDTO
     {
-      public  List<CommandDTO> commands { get; set; }
-    }
-public class CommandDTO
-{
-    public string type { get; set; }
-        public List<ValueArr> value { get; set; }
+        public string type { get; set; }
+        public List<ValueDTO> value { get; set; }
     }
 
-    public class ValueArr
+    public class ValueDTO
     {
         public string op { get; set; }
-    
+
         public string path { get; set; }
-    
-        public string value { get; set; }
+
+        public List<MemberKeys> value { get; set; }
+    }
+
+
+    public class MemberKeys
+    {
+        public string memberKey { get; set; }
+        public string groupKey { get; set; }
+        public string lineOfBusiness { get; set; }
     }
 }
