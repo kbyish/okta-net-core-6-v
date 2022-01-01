@@ -3927,9 +3927,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\Member.csproj",
-      "projectName": "Member",
-      "projectPath": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\Member.csproj",
+      "projectUniqueName": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\OktaHooks.csproj",
+      "projectName": "OktaHooks",
+      "projectPath": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\OktaHooks.csproj",
       "packagesPath": "C:\\Users\\kbyis\\.nuget\\packages\\",
       "outputPath": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\obj\\",
       "projectStyle": "PackageReference",

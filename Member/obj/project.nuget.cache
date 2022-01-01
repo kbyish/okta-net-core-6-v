@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/P6iaZeeUFl3kD1iO6uV3EFOn/Csq0gxHuZlWVz93M/h381+h4kpZMKDFHn4cuVhzQjGhmFFF+b/Gm2q3EIcMg==",
+  "dgSpecHash": "yLvNVK5mr20UhrcStsg4IVQDZfIA5o7gVu/wD3VCyaiadtO1fjRBSsMm31D6vTRyU0hW6J9GQchin/5TzIknUw==",
   "success": true,
-  "projectFilePath": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\Member.csproj",
+  "projectFilePath": "C:\\myData\\Okta\\okta-net\\okta-net-core-6-v\\Member\\OktaHooks.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kbyis\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.1\\microsoft.aspnetcore.authentication.jwtbearer.3.1.1.nupkg.sha512",
     "C:\\Users\\kbyis\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.1\\microsoft.aspnetcore.authentication.openidconnect.3.1.1.nupkg.sha512",
