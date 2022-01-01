@@ -1,3 +1,4 @@
+using Member.Middleware;
 using Okta.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -46,6 +47,7 @@ app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<ApiKeyMiddleware>();
 
 app.MapControllers();
 
