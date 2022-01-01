@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Member.Attributes;
+using PremeraOktaHooks.Attributes;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Member.Controllers
+namespace PremeraOktaHooks.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 
-namespace Member.Middleware
+namespace PremeraOktaHooks.Middleware
 {
     public class ApiKeyMiddleware
     {

@@ -1,4 +1,4 @@
-using Member.Middleware;
+using PremeraOktaHooks.Middleware;
 using Okta.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);

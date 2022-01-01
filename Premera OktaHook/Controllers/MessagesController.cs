@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Member.Controllers
+namespace PremeraOktaHooks.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

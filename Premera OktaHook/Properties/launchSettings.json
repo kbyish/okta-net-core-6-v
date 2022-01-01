@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Member": {
+    "PremerOktaHooks": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

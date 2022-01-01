@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 
  
-namespace Member.Attributes
+namespace PremeraOktaHooks.Attributes
 {
     [AttributeUsage(validOn: AttributeTargets.Class)]
     public class ApiKeyAttribute : Attribute, IAsyncActionFilter
